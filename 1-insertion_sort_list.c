@@ -8,7 +8,7 @@ void insertion_sort_list(listint_t **list)
 {
 	int test = 0; /* test if sorted */
 	listint_t *copyNode1, *copyNode2;
-	listint_t *head = *list;
+	listint_t *head;
 
 	if (list == NULL || *list == NULL)
 		return;
