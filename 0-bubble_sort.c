@@ -6,7 +6,7 @@ void bubble_sort(int *array, size_t size)
     size_t i = 0;
     int copyValue;
 
-    while (test == 0)
+    while (array && test == 0)
     {
         test = 1;
         i = 0;
