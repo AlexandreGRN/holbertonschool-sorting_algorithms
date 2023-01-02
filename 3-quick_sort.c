@@ -5,22 +5,30 @@ void quick_sort(int *array, size_t size)
     size_t i = 0, j = 0;
     int test = 0;
     int copy;
+    int store;
+    int change;
     
-    while (test == 0)
+    while (i < size - 1)
     {
         j = i;
-        test = 1;
+        copy = array[i];
+        change = 0;
         while (j < size)
         {
-            if (array[j] < array[i])
+            if (array[j] < copy)
             {
-                copy = array[i];
-                array[i] = array[j];
-                array[j] = copy;
-                test = 0;
-                print_array(array, size);
+                test = j;
+                copy = array[j];
+                change = 1;
             }
-        j++;
+            j++;
+        }
+        if (change == 1)
+        {
+            store = array[i];
+            array[i] = array[test];
+            array[test] = store;
+            print_array(array, size);
         }
     i++;
     }
