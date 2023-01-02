@@ -10,7 +10,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *copyNode1, *copyNode2;
 	listint_t *head = *list;
 
-	if (!(list) || !(*list))
+	if (list == NULL || *list == NULL)
 		return;
 	while (test == 0)
 	{
