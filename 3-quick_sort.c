@@ -18,6 +18,7 @@ void quick_sort(int *array, size_t size)
                 array[i] = array[j];
                 array[j] = copy;
                 test = 0;
+                print_array(array, size);
             }
         j++;
         }
